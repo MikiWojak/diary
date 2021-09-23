@@ -11,12 +11,8 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/MikiWojak/diary.git"
+        "url": "git@github.com:MikiWojak/diary.git"
     },
     "author": "MikiWojak",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/MikiWojak/diary/issues"
-    },
-    "homepage": "https://github.com/MikiWojak/diary#readme"
+    "license": "MIT"
 }
