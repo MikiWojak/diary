@@ -6,7 +6,6 @@
         "eslint": "cd backend; npm run eslint;"
     },
     "devDependencies": {
-        "pre-commit": "~1.2.2",
         "prettier": "2.2.1"
     },
     "repository": {
