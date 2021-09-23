@@ -1,15 +1,40 @@
 module.exports = {
-    root: true,
-    env: {
-        browser: true,
-        node: true
+    extends: [
+        'eslint:recommended',
+        'plugin:vue/recommended',
+        '@nuxtjs',
+        'plugin:nuxt/recommended',
+        'prettier'
+    ],
+    rules: {
+        'no-unused-vars': [
+            'error',
+            { vars: 'all', args: 'after-used', ignoreRestSiblings: true }
+        ],
+        'vue/html-indent': ['error', 4, { baseIndent: 1 }],
+        'vue/script-indent': ['error', 4, { baseIndent: 0 }],
+        'vue/max-attributes-per-line': ['off'],
+        'vue/html-self-closing': ['off']
     },
     parserOptions: {
-        parser: '@babel/eslint-parser',
-        requireConfigFile: false
+        sourceType: 'module'
     },
-    extends: ['@nuxtjs', 'plugin:nuxt/recommended', 'prettier'],
-    plugins: [],
-    // add your custom rules here
-    rules: {}
+    overrides: [
+        {
+            files: ['src/**/*'],
+            parserOptions: {
+                parser: 'babel-eslint',
+                sourceType: 'module'
+            },
+            env: {
+                browser: true
+            }
+        }
+    ],
+    globals: {
+        $: true,
+        require: true,
+        process: true,
+        module: true
+    }
 };
